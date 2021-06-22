@@ -1,0 +1,93 @@
+CREATE TABLE `games_details` (
+  `GAME_ID` INT,
+  `TEAM_ID` INT,
+  `TEAM_ABBREVIATION` CHAR(3),
+  `TEAM_CITY` VARCHAR(50),
+  `PLAYER_ID` INT,
+  `PLAYER_NAME` VARCHAR(25),
+  `START_POSITION` char(1),
+  `COMMENT` VARCHAR(50),
+  `MIN` VARCHAR(50),
+  `FGM` VARCHAR(50),
+  `FGA` VARCHAR(50),
+  `FG_PCT` VARCHAR(50),
+  `FG3M` VARCHAR(50),
+  `FG3A` VARCHAR(50),
+  `FG3_PCT` VARCHAR(50),
+  `FTM` VARCHAR(50),
+  `FTA` VARCHAR(50),
+  `FT_PCT` VARCHAR(50),
+  `OREB` VARCHAR(50),
+  `DREB` VARCHAR(50),
+  `REB` VARCHAR(50),
+  `AST` VARCHAR(50),
+  `STL` VARCHAR(50),
+  `BLK` VARCHAR(50),
+  `TO` VARCHAR(50),
+  `PF` VARCHAR(50),
+  `PTS` VARCHAR(50),
+  `PLUS_MINUS` VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS `Games` (
+`GAME_DATE_EST` VARCHAR(50) NULL,
+`GAME_ID` INT NULL,
+`GAME_STATUS_TEXT` VARCHAR(50) NULL,
+`HOME_TEAM_ID` INT NULL,
+`VISITOR_TEAM_ID` INT NULL,
+`SEASON` INT NULL,
+`TEAM_ID_home` INT NULL,
+`PTS_home` VARCHAR(50) NULL,
+`FG_PCT_home` VARCHAR(50) NULL,
+`FT_PCT_home` VARCHAR(50) NULL,
+`FG3_PCT_home` VARCHAR(50) NULL,
+`AST_home` VARCHAR(50) NULL,
+`REB_home` VARCHAR(50) NULL,
+`TEAM_ID_away` INT NULL,
+`PTS_away` VARCHAR(50) NULL,
+`FG_PCT_away` VARCHAR(50) NULL,
+`FT_PCT_away` VARCHAR(50) NULL,
+`FG3_PCT_away` VARCHAR(50) NULL,
+`AST_away` VARCHAR(50) NULL,
+`REB_away` VARCHAR(50) NULL,
+`HOME_TEAM_WINS` INT NULL
+);
+
+CREATE TABLE `players` (
+  `PLAYER_NAME` varchar(24),
+  `TEAM_ID` int,
+  `PLAYER_ID` int,
+  `SEASON` int
+);
+
+CREATE TABLE `ranking` (
+  `TEAM_ID` int,
+  `LEAGUE_ID` int,
+  `SEASON_ID` int,
+  `STANDINGSDATE` date,
+  `CONFERENCE` varchar(4),
+  `TEAM` varchar(25),
+  `G` int,
+  `W` int,
+  `L` int,
+  `W_PCT` varchar(20),
+  `HOME_RECORD` varchar(5),
+  `ROAD_RECORD` varchar(5)
+);
+
+CREATE TABLE `teams` (
+  `LEAGUE_ID` int,
+  `TEAM_ID` int,
+  `MIN_YEAR` int,
+  `MAX_YEAR` int,
+  `ABBREVIATION` varchar(3),
+  `NICKNAME` varchar(13),
+  `YEARFOUNDED` INSERT,
+  `CITY` varchar(13),
+  `ARENA` varchar(26),
+  `ARENACAPACITY` int,
+  `OWNER` varchar(35),
+  `GENERALMANAGER` varchar(15),
+  `HEADCOACH` varchar(16),
+  `DLEAGUEAFFILIATION` varchar(33)
+);

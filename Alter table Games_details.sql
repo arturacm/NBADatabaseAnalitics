@@ -1,0 +1,57 @@
+SELECT * FROM Games_details;
+
+update Games_details set PLUS_MINUS = NULL where PLUS_MINUS = '';
+update Games_details set PF = NULL where PF = '';
+update Games_details set PTS = NULL where PTS = '';
+update Games_details set `TO` = NULL where `TO` = '';
+update Games_details set BLK = NULL where BLK = '';
+
+update Games_details set STL = NULL where STL = '';
+update Games_details set AST = NULL where AST = '';
+update Games_details set REB = NULL where REB = '';
+update Games_details set DREB = NULL where DREB = '';
+update Games_details set OREB = NULL where OREB = '';
+
+update Games_details set FT_PCT = NULL where FT_PCT = '';
+update Games_details set FTA = NULL where FTA = '';
+update Games_details set FTM = NULL where FTM = '';
+update Games_details set FG3_PCT = NULL where FG3_PCT = '';
+update Games_details set FG3A = NULL where FG3A = '';
+update Games_details set FG3M = NULL where FG3M = '';
+
+update Games_details set FG_PCT = NULL where FG_PCT = '';
+update Games_details set FGA = NULL where FGA = '';
+update Games_details set FGM = NULL where FGM = '';
+
+ALTER TABLE `Games_details` 
+CHANGE COLUMN `BLK` `BLK` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `TO` `TO` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `PF` `PF` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `PTS` `PTS` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `PLUS_MINUS` `PLUS_MINUS` SMALLINT NULL DEFAULT NULL ;
+
+
+ALTER TABLE `Games_details` 
+CHANGE COLUMN `OREB` `OREB` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `DREB` `DREB` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `REB` `REB` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `AST` `AST` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `STL` `STL` SMALLINT NULL DEFAULT NULL ;
+
+ALTER TABLE `Games_details` 
+CHANGE COLUMN `FG3M` `FG3M` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FG3A` `FG3A` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FG3_PCT` `FG3_PCT` FLOAT NULL DEFAULT NULL ,
+CHANGE COLUMN `FTM` `FTM` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FTA` `FTA` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FT_PCT` `FT_PCT` FLOAT NULL DEFAULT NULL ;
+
+ALTER TABLE `Games_details` 
+CHANGE COLUMN `FGM` `FGM` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FGA` `FGA` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FG_PCT` `FG_PCT` FLOAT NULL DEFAULT NULL ;
+
+ALTER TABLE `Games_details` 
+CHANGE COLUMN `FGM` `FGM` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FGA` `FGA` SMALLINT NULL DEFAULT NULL ,
+CHANGE COLUMN `FG_PCT` `FG_PCT` FLOAT NULL DEFAULT NULL ;
